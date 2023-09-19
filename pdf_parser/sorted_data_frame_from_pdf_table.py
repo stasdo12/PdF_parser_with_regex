@@ -9,7 +9,7 @@ class PDFProcessor:
     def extract_data(self):
         tables = tabula.read_pdf(self.pdf_file_path, pages='all')
         if tables:
-            return tables[0]  # Возвращаем первую таблицу, вы можете настроить выбор таблицы по вашим потребностям
+            return tables[0]
         else:
             return None
 
@@ -46,6 +46,5 @@ if __name__ == "__main__":
             print(processor.sort_dataframe(df, "Salary").to_json("By_salary.json"))
             print("Sorted by Date:")
             print(processor.sort_dataframe(df, "Date").to_json("By_Date.json"))
-
 
 
