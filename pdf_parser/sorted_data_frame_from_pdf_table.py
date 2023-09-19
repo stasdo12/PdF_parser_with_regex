@@ -37,14 +37,19 @@ if __name__ == "__main__":
 
         if df is not None:
             print("Tail:")
-            print(df.tail().to_csv("Tail.csv"))
+            print(df.tail(3))
+            df.tail().to_csv("Tail.csv")
             print("Head:")
-            print(df.head().to_csv("Head.csv"))
+            print(df.head(3))
+            df.head().to_csv("Head.csv")
             print("Sorted by Name:")
-            print(processor.sort_dataframe(df, "Name").to_csv("By_name.csv"))
+            print(processor.sort_dataframe(df, "Name"))
+            processor.sort_dataframe(df, "Name").to_csv("By_name.csv")
             print("Sorted by Salary:")
-            print(processor.sort_dataframe(df, "Salary").to_json("By_salary.json"))
+            print(processor.sort_dataframe(df, "Salary"))
+            processor.sort_dataframe(df, "Salary").to_json("By_salary.json")
             print("Sorted by Date:")
-            print(processor.sort_dataframe(df, "Date").to_json("By_Date.json"))
+            print(processor.sort_dataframe(df, "Date"))
+            processor.sort_dataframe(df, "Date").to_json("By_Date.json")
 
 
