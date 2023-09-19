@@ -4,7 +4,7 @@ from reportlab.lib import colors
 
 
 workers = [
-    {"Name": "Ivan", "Date": "2023-02-19", "Salary": "50000"},
+    {"Name": "Ivan", "Date": "2023-02-19", "Salary" : "50000"},
     {"Name": "Stanislav", "Date": "2023-04-19", "Salary": "23000"},
     {"Name": "Nikola", "Date": "2023-03-19", "Salary": "14000"},
     {"Name": "Svetlana", "Date": "2023-01-19", "Salary": "2000"},
